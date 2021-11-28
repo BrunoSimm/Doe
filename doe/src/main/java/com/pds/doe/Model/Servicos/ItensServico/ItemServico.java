@@ -1,8 +1,8 @@
-package 02-Arquitetura.03-Pacotes.Model.Servicos.ItensServico;
+package com.pds.doe.Model.Servicos.ItensServico;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
-import 02-Arquitetura.03-Pacotes.View.CadastrarItem.ItemDTO;
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.ItensRepositorio.IRepositorioItem;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
+import com.pds.doe.View.CadastrarItem.ItemDTO;
+import com.pds.doe.Model.Repositorios.ItensRepositorio.IRepositorioItem;
 
 public class ItemServico {
 

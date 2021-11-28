@@ -1,8 +1,8 @@
-package 02-Arquitetura.03-Pacotes.Controller.CadastroController;
+package com.pds.doe.Controller.CadastroController;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.ONG.ONG;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.Doador.Doador;
-import 02-Arquitetura.03-Pacotes.Model.Servicos.CadastroServico.CadastroServico;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.Doador.Doador;
+import com.pds.doe.Model.Servicos.CadastroServico.CadastroServico;
 
 public class CadastroController {
 

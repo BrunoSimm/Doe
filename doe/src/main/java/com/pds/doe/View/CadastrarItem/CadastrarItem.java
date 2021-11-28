@@ -1,6 +1,6 @@
-package 02-Arquitetura.03-Pacotes.View.CadastrarItem;
+package com.pds.doe.View.CadastrarItem;
 
-import 02-Arquitetura.03-Pacotes.Controller.ItensController.ItemController;
+import com.pds.doe.Controller.ItensController.ItemController;
 
 public class CadastrarItem {
 

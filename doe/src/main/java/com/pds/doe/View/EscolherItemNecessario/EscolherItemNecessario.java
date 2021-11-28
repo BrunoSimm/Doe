@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.View.EscolherItemNecessario;
+package com.pds.doe.View.EscolherItemNecessario;
 
-import 02-Arquitetura.03-Pacotes.Controller.NecessidadeController.NecessidadeController;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Controller.NecessidadeController.NecessidadeController;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import java.util.Date;
 
 public class EscolherItemNecessario {

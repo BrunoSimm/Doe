@@ -1,8 +1,8 @@
-package 02-Arquitetura.03-Pacotes.Model.Servicos.NecessidadeServico;
+package com.pds.doe.Model.Servicos.NecessidadeServico;
 
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.NecessidadeRepositorio.IRepositorioNecessidade;
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.ItensRepositorio.IRepositorioItem;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.Repositorios.NecessidadeRepositorio.IRepositorioNecessidade;
+import com.pds.doe.Model.Repositorios.ItensRepositorio.IRepositorioItem;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import java.util.Date;
 import java.util.List;
 

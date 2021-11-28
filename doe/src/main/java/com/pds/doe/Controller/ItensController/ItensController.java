@@ -1,9 +1,9 @@
-package 02-Arquitetura.03-Pacotes.Controller.ItensController;
+package com.pds.doe.Controller.ItensController;
 
 import 01-Analise.03-Modelo de analise.UC09 - Filtrar lista de itens.Diagrama de classes de analise.Realiza Busca;
-import 02-Arquitetura.03-Pacotes.Model.Servicos.ItensServico.Realiza Busca;
+import com.pds.doe.Model.Servicos.ItensServico.Realiza Busca;
 import java.util.List;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 
 public class ItensController {
 

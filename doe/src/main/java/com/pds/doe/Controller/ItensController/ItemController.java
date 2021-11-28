@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Controller.ItensController;
+package com.pds.doe.Controller.ItensController;
 
-import 02-Arquitetura.03-Pacotes.View.CadastrarItem.ItemDTO;
-import 02-Arquitetura.03-Pacotes.Model.Servicos.ItensServico.ItemServico;
+import com.pds.doe.View.CadastrarItem.ItemDTO;
+import com.pds.doe.Model.Servicos.ItensServico.ItemServico;
 
 public class ItemController {
 

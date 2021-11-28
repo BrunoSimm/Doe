@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Model.Repositorios.ItensRepositorio;
+package com.pds.doe.Model.Repositorios.ItensRepositorio;
 
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.IRepositorio;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.Repositorios.IRepositorio;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 
 public interface ItensParaONGSolicitar extends IRepositorio {
 

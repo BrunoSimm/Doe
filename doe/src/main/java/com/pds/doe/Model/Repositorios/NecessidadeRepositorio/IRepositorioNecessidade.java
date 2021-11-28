@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Model.Repositorios.NecessidadeRepositorio;
+package com.pds.doe.Model.Repositorios.NecessidadeRepositorio;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Necessidade.Necessidade;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import java.util.Date;
 
 public interface IRepositorioNecessidade {

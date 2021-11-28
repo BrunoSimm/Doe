@@ -1,4 +1,4 @@
-package 02-Arquitetura.03-Pacotes.View.CadastrarItem;
+package com.pds.doe.View.CadastrarItem;
 
 public class ItemDTO {
 

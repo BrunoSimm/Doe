@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Model.Servicos.ItensServico;
+package com.pds.doe.Model.Servicos.ItensServico;
 
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.DoacoesRepositorio.ItensNecessidade;
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.ItensRepositorio.ItensParaONGSolicitar;
+import com.pds.doe.Model.Repositorios.DoacoesRepositorio.ItensNecessidade;
+import com.pds.doe.Model.Repositorios.ItensRepositorio.ItensParaONGSolicitar;
 import java.util.List;
 
 public class Realiza Busca {

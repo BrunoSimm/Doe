@@ -1,6 +1,6 @@
-package 02-Arquitetura.03-Pacotes.Model.Repositorios.UsuariosRepositorio;
+package com.pds.doe.Model.Repositorios.UsuariosRepositorio;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.ONG.ONG;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
 
 public interface IRepositorioONG {
 

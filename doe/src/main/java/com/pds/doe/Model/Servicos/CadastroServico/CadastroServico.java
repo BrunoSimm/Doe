@@ -1,9 +1,9 @@
-package 02-Arquitetura.03-Pacotes.Model.Servicos.CadastroServico;
+package com.pds.doe.Model.Servicos.CadastroServico;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.ONG.ONG;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.Doador.Doador;
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.UsuariosRepositorio.IRepositorioONG;
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.UsuariosRepositorio.IRepositorioDoador;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.Doador.Doador;
+import com.pds.doe.Model.Repositorios.UsuariosRepositorio.IRepositorioONG;
+import com.pds.doe.Model.Repositorios.UsuariosRepositorio.IRepositorioDoador;
 
 public class CadastroServico {
 

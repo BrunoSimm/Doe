@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Necessidade;
+package com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade;
 
 import java.util.Date;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 
 public class Necessidade {
 

@@ -1,4 +1,4 @@
-package 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item;
+package com.pds.doe.Model.DominioDeNegocio.Doacoes.Item;
 
 public class Item {
 

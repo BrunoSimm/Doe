@@ -1,9 +1,9 @@
-package 02-Arquitetura.03-Pacotes.Controller.NecessidadeController;
+package com.pds.doe.Controller.NecessidadeController;
 
-import 02-Arquitetura.03-Pacotes.Model.Servicos.NecessidadeServico.NecessidadeServico;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Necessidade.Necessidade;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.ONG.ONG;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Item.Item;
+import com.pds.doe.Model.Servicos.NecessidadeServico.NecessidadeServico;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import java.util.Date;
 import java.util.List;
 

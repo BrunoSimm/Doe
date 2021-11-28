@@ -1,6 +1,6 @@
-package 02-Arquitetura.03-Pacotes.View.CadastrarUsuario;
+package com.pds.doe.View.CadastrarUsuario;
 
-import 02-Arquitetura.03-Pacotes.Controller.CadastroController.CadastroController;
+import com.pds.doe.Controller.CadastroController.CadastroController;
 
 public class CadastrarUsuarios {
 

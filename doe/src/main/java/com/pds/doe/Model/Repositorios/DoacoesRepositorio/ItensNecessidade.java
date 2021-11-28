@@ -1,7 +1,7 @@
-package 02-Arquitetura.03-Pacotes.Model.Repositorios.DoacoesRepositorio;
+package com.pds.doe.Model.Repositorios.DoacoesRepositorio;
 
-import 02-Arquitetura.03-Pacotes.Model.Repositorios.IRepositorio;
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Doacoes.Necessidade.Necessidade;
+import com.pds.doe.Model.Repositorios.IRepositorio;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
 
 public interface ItensNecessidade extends IRepositorio {
 

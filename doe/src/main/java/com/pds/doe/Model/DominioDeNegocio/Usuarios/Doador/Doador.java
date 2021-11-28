@@ -1,6 +1,6 @@
-package 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.Doador;
+package com.pds.doe.Model.DominioDeNegocio.Usuarios.Doador;
 
-import 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios.Usuario;
+import com.pds.doe.Model.DominioDeNegocio.Usuarios.Usuario;
 
 public class Doador extends Usuario {
 

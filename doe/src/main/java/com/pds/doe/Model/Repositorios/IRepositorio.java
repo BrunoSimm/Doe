@@ -1,4 +1,4 @@
-package 02-Arquitetura.03-Pacotes.Model.Repositorios;
+package com.pds.doe.Model.Repositorios;
 
 import java.util.Collection;
 

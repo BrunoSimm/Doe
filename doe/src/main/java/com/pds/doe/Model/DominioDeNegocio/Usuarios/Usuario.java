@@ -1,4 +1,4 @@
-package 02-Arquitetura.03-Pacotes.Model.Dominio de Negocio.Usuarios;
+package com.pds.doe.Model.DominioDeNegocio.Usuarios;
 
 public class Usuario {
 
