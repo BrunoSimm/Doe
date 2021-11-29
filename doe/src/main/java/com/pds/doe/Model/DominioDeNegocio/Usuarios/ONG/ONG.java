@@ -3,7 +3,6 @@ package com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG;
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.Usuario;
 
 public class ONG extends Usuario {
-
 	private String finalidade;
 	private String representante;
 	private String registro;
@@ -41,19 +40,15 @@ public class ONG extends Usuario {
 	}
 
 	public void bloquearConta() {
-
+		this.estadoDaConta = EstadoDaConta.Bloqueada;
 	}
 
 	public void desbloquearConta() {
-
+		this.estadoDaConta = EstadoDaConta.Ativa;
 	}
 
 	public void ativarConta() {
-
-	}
-
-	public void deletarConta() {
-
+		this.estadoDaConta = EstadoDaConta.Ativa;
 	}
 
 }
