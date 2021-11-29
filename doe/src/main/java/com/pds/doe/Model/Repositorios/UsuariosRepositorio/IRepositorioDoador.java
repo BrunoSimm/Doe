@@ -1,15 +1,10 @@
 package com.pds.doe.Model.Repositorios.UsuariosRepositorio;
 
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.Doador.Doador;
+import com.pds.doe.Model.Repositorios.IRepositorio;
 
-public interface IRepositorioDoador {
+public interface IRepositorioDoador<E, K> extends IRepositorio<E, K> {
 
-	private Doador[] doador;
-
-	public abstract void create(Doador doador);
-
-	public abstract boolean consultaDoadorByCpf(String cpf);
-
-	public abstract boolean consultaDoadorByEmail(String email);
+	Doador[] doadores;
 
 }

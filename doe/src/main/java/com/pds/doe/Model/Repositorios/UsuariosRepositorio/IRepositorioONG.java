@@ -1,13 +1,10 @@
 package com.pds.doe.Model.Repositorios.UsuariosRepositorio;
 
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
+import com.pds.doe.Model.Repositorios.IRepositorio;
 
-public interface IRepositorioONG {
+public interface IRepositorioONG extends IRepositorio<E, K> {
 
-	private ONG[] oNG;
-
-	public abstract void create(ONG ong);
-
-	public abstract boolean consultaONGByRegistro(String registro);
+	ONG[] ONGs;
 
 }

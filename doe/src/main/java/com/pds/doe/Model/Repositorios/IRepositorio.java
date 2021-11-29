@@ -1,19 +1,13 @@
 package com.pds.doe.Model.Repositorios;
 
 import java.util.Collection;
+import java.util.function.Predicate;
 
-public interface IRepositorio {
-
-	public abstract void create(E elemento);
-
-	public abstract void update(E elemento);
-
-	public abstract void delete(K chave);
-
-	public abstract E read(K chave);
-
-	public abstract Collection<E> todos();
-
-	public abstract Collection<E> pesquisa(Predicate<E> pred);
-
+public interface IRepositorio<E, K> {
+	void create(E elemento);
+    void atualiza(E elemento);
+    void remove(K chave);
+    Collection<E> pesquisa(Predicate<E> pred);
+    Collection<E> todos();
+    E read(K chave);
 }
