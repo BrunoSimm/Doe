@@ -32,12 +32,13 @@ public class CadastroServico {
 
 	public ONG cadastrarONG(CadastroONGDTO ongDTO) {
 		// TODO: validar dados do DTO
+		
 		ONG ong = new ONG(
+			null,
 			ongDTO.getEmail(), 
 			ongDTO.getSenha(), 
 			ongDTO.getNome(), 
 			ongDTO.getTelefone(), 
-			null, 
 			ongDTO.getFinalidade(), 
 			ongDTO.getRepresentante(), 
 			ongDTO.getRegistro(), 
@@ -50,11 +51,11 @@ public class CadastroServico {
 	public Doador cadastrarDoador(CadastroDoadorDTO doadorDTO) {
 		// TODO: validar dados do DTO
 		Doador doador = new Doador(
+			null,
 			doadorDTO.getEmail(), 
 			doadorDTO.getSenha(), 
 			doadorDTO.getNome(), 
 			doadorDTO.getTelefone(), 
-			null, 
 			doadorDTO.getSobrenome(), 
 			doadorDTO.getCpf(), 
 			true

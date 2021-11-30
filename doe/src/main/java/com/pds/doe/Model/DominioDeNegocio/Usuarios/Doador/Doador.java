@@ -6,42 +6,35 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.Usuario;
+
+import org.hibernate.validator.constraints.br.CPF;
 
 @Entity
 @Table(name = "doadores")
 public class Doador extends Usuario {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
 	@Column
 	private String sobrenome;
 	
 	@Column
+	@CPF
 	private String cpf;
 	
 	@Column
 	private boolean contaAtiva;
 
-	public Doador(String email, String senha, String nome, String telefone, Long id, String sobrenome, String cpf,
-			boolean contaAtiva) {
-		super(email, senha, nome, telefone);
-		this.id = id;
+	public Doador(Long user_id, @Email String email, @NotBlank String senha, @NotBlank String nome,
+			@NotBlank String telefone, String sobrenome, @CPF String cpf, boolean contaAtiva) {
+		super(user_id, email, senha, nome, telefone);
 		this.sobrenome = sobrenome;
 		this.cpf = cpf;
 		this.contaAtiva = contaAtiva;
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getSobrenome() {
 		return sobrenome;
@@ -69,7 +62,7 @@ public class Doador extends Usuario {
 
 	@Override
 	public String toString() {
-		return "Doador [contaAtiva=" + contaAtiva + ", cpf=" + cpf + ", id=" + id + ", sobrenome=" + sobrenome + "]";
+		return "Doador [contaAtiva=" + contaAtiva + ", cpf=" + cpf + ", id=" + ", sobrenome=" + sobrenome + "]";
 	}
 
 }

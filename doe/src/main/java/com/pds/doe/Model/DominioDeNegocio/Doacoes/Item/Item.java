@@ -30,7 +30,7 @@ public class Item {
     @Column
     private String imagem;
 	
-    @Column()
+    @Column
     private boolean ativo = false;
 
     @OneToMany(cascade = CascadeType.ALL)

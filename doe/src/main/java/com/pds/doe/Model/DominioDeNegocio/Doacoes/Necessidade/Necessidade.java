@@ -30,8 +30,6 @@ public class Necessidade {
 	@Column
 	private String status = "inativo";
 	
-	
-
 	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status) {
 		this.id = id;
 		this.quantidade_esperada = quantidade_esperada;
