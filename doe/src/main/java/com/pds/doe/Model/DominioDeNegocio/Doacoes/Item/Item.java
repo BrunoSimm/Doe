@@ -1,11 +1,18 @@
 package com.pds.doe.Model.DominioDeNegocio.Doacoes.Item;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
 
 @Entity
 @Table(name = "itens")
@@ -25,6 +32,10 @@ public class Item {
 	
     @Column()
     private boolean ativo = false;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "item_id")
+    private List<Necessidade> necessidades;
 
 	public Item(String nome, String descricao, String imagem, boolean ativo) {
 		this.nome = nome;

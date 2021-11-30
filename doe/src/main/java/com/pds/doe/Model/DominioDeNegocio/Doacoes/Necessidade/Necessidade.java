@@ -7,9 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
+
 
 @Entity
 @Table(name = "necessidades")
@@ -22,27 +21,23 @@ public class Necessidade {
 	@Column
 	private int quantidade_esperada;
 	
-	@Column()
+	@Column
 	private int quantidade_atual = 0;
 	
 	@Column
 	private Date prazoLimite;
 	
-	@Column()
+	@Column
 	private String status = "inativo";
 	
-	@JoinColumn(name = "item_id")
-	@NotBlank(message = "Item Id é obrigatório!")
-	private Long itemId;
+	
 
-	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status,
-			@NotBlank(message = "Item Id é obrigatório!") Long itemId) {
+	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status) {
 		this.id = id;
 		this.quantidade_esperada = quantidade_esperada;
 		this.quantidade_atual = quantidade_atual;
 		this.prazoLimite = prazoLimite;
 		this.status = status;
-		this.itemId = itemId;
 	}
 
 	public Long getId() {
@@ -85,17 +80,11 @@ public class Necessidade {
 		this.status = status;
 	}
 
-	public Long getItemId() {
-		return itemId;
-	}
-
-	public void setItemId(Long itemId) {
-		this.itemId = itemId;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Necessidade [id=" + id + ", itemId=" + itemId + ", prazoLimite=" + prazoLimite + ", quantidade_atual="
+		return "Necessidade [id=" + id + ", prazoLimite=" + prazoLimite + ", quantidade_atual="
 				+ quantidade_atual + ", quantidade_esperada=" + quantidade_esperada + ", status=" + status + "]";
 	}
 }
