@@ -8,8 +8,10 @@ public class ItemDTO {
 
 	private String imagem;
 
-	public ItemDTO ItemDTO(String nome, String descricao, String imagem) {
-		return null;
+	public ItemDTO(String nome, String descricao, String imagem) {
+		this.nome = nome;
+		this.descricao = descricao;
+		this.imagem = imagem;
 	}
 
 	public String getNome() {

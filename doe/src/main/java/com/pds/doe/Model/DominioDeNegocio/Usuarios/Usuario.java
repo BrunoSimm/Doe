@@ -1,6 +1,6 @@
 package com.pds.doe.Model.DominioDeNegocio.Usuarios;
 
-public class Usuario {
+public abstract class Usuario {
 
 	private String email;
 	private String senha;

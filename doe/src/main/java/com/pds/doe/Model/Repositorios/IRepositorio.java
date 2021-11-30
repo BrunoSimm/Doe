@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.function.Predicate;
 
 public interface IRepositorio<E, K> {
-	void create(E elemento);
+	E create(E elemento);
     void atualiza(E elemento);
     void remove(K chave);
     Collection<E> pesquisa(Predicate<E> pred);

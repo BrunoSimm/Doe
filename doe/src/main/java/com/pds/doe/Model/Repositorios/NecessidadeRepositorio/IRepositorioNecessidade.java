@@ -4,9 +4,9 @@ import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
 import com.pds.doe.Model.Repositorios.IRepositorio;
 import java.util.List;
 
-public interface IRepositorioNecessidade extends IRepositorio<Necessidade, Integer> {
+public interface IRepositorioNecessidade {
 	
-	List<Necessidade> findBychave(Integer chave);
-    List<Necessidade> findfindAll();
+	//List<Necessidade> findBychave(Integer chave);
+    //List<Necessidade> findfindAll();
 
 }

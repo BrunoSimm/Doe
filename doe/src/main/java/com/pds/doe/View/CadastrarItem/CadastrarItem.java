@@ -1,10 +1,8 @@
 package com.pds.doe.View.CadastrarItem;
+import org.springframework.stereotype.Service;
 
-import com.pds.doe.Controller.ItemController.ItensController;
-
+@Service
 public class CadastrarItem {
-
-	private ItensController itemController;
 
 
 	public void solicitaCadastroItem(String nome, String descricao, String imagem) {

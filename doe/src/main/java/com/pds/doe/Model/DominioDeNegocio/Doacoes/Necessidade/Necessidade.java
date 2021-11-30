@@ -1,48 +1,60 @@
 package com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade;
 
 import java.util.Date;
-import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+
+@Entity
+@Table(name = "necessidades")
 public class Necessidade {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
+	@Column
 	private int quantidade_esperada;
+	
+	@Column()
 	private int quantidade_atual = 0;
+	
+	@Column
 	private Date prazoLimite;
+	
+	@Column()
 	private String status = "inativo";
-	private Item item;
+	
+	@JoinColumn(name = "item_id")
+	@NotBlank(message = "Item Id é obrigatório!")
+	private Long itemId;
 
-	public Necessidade(Item item, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status) {
+	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status,
+			@NotBlank(message = "Item Id é obrigatório!") Long itemId) {
+		this.id = id;
 		this.quantidade_esperada = quantidade_esperada;
-        this.prazoLimite = prazoLimite;
-        this.item = item;
 		this.quantidade_atual = quantidade_atual;
 		this.prazoLimite = prazoLimite;
 		this.status = status;
+		this.itemId = itemId;
 	}
 
-	public boolean atualizarNecessidade(Item item, int quantidade, Date prazoLimite, String status, int quantidade_atual) {
-		return false;
+	public Long getId() {
+		return id;
 	}
 
-	public boolean receberDoacao(int quantidade) {
-		return false;
+	public void setId(Long id) {
+		this.id = id;
 	}
-
-	public Necessidade desativarNecessidade() {
-		return null;
-	}
-
-	public Necessidade ativarNecessidade() {
-		return null;
-	}
-
-	public boolean delete() {
-		return false;
-	}
-
 
 	public int getQuantidade_esperada() {
-		return this.quantidade_esperada;
+		return quantidade_esperada;
 	}
 
 	public void setQuantidade_esperada(int quantidade_esperada) {
@@ -50,7 +62,7 @@ public class Necessidade {
 	}
 
 	public int getQuantidade_atual() {
-		return this.quantidade_atual;
+		return quantidade_atual;
 	}
 
 	public void setQuantidade_atual(int quantidade_atual) {
@@ -58,7 +70,7 @@ public class Necessidade {
 	}
 
 	public Date getPrazoLimite() {
-		return this.prazoLimite;
+		return prazoLimite;
 	}
 
 	public void setPrazoLimite(Date prazoLimite) {
@@ -66,20 +78,24 @@ public class Necessidade {
 	}
 
 	public String getStatus() {
-		return this.status;
+		return status;
 	}
 
 	public void setStatus(String status) {
 		this.status = status;
 	}
 
-	public Item getItem() {
-		return this.item;
+	public Long getItemId() {
+		return itemId;
 	}
 
-	public void setItem(Item item) {
-		this.item = item;
+	public void setItemId(Long itemId) {
+		this.itemId = itemId;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Necessidade [id=" + id + ", itemId=" + itemId + ", prazoLimite=" + prazoLimite + ", quantidade_atual="
+				+ quantidade_atual + ", quantidade_esperada=" + quantidade_esperada + ", status=" + status + "]";
+	}
 }

@@ -16,17 +16,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/cadastro")
 public class CadastroController {
 
-	@Autowired
 	private CadastroServico cadastroServico;
+	
+	@Autowired
+	public CadastroController(CadastroServico cadastroServico) {
+		this.cadastroServico = cadastroServico;
+	}
 
 	@PostMapping("/ong")
-	public boolean cadastrar(@RequestBody CadastroONGDTO cadastroONGDTO) {
-		return cadastroServico.cadastrarUsuario(cadastroONGDTO);
+	public ONG cadastrar(@RequestBody CadastroONGDTO cadastroONGDTO) {
+		return cadastroServico.cadastrarONG(cadastroONGDTO);
 	}
 
 	@PostMapping("/doador")
-	public boolean cadastrar(@RequestBody CadastroDoadorDTO cadastroDoadorDTO) {
-		return cadastroServico.cadastrarUsuario(cadastroDoadorDTO);
+	public Doador cadastrar(@RequestBody CadastroDoadorDTO cadastroDoadorDTO) {
+		return cadastroServico.cadastrarDoador(cadastroDoadorDTO);
 	}
 
 }

@@ -9,6 +9,7 @@ public class CadastroONGDTO {
     private String representante;
     private String registro;
     private String dominio;
+    
     public CadastroONGDTO(String email, String senha, String nome, String telefone, String finalidade,
             String representante, String registro, String dominio) {
         this.email = email;
