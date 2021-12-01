@@ -29,7 +29,7 @@ public class Item {
     @Column
     private String descricao;
 	
-    @Column(length = 7000)
+    @Column(length = 20000)
     private String imagem;
 	
     @Column
