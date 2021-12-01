@@ -5,6 +5,9 @@ import java.util.Base64;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//@DataJpaTest
+//@AutoConfigureTestDatabase(replace = Replace.NONE)
+//@Rollback(false)
 @SpringBootApplication
 public class DoeApplication {
 

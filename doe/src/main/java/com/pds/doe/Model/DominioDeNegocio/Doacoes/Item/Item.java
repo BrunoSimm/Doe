@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +18,7 @@ import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
 @Entity
 @Table(name = "itens")
 public class Item {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,8 +35,8 @@ public class Item {
     @Column
     private boolean ativo = false;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "item_id")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id") // TODO: Lazy Load
     private List<Necessidade> necessidades;
 
 	public Item(String nome, String descricao, String imagem, boolean ativo) {
@@ -44,8 +46,20 @@ public class Item {
         this.ativo = ativo;
 	}	
 
+    public Item(){
+
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public void setNome(String nome) {
@@ -53,7 +67,7 @@ public class Item {
     }
 
     public String getDescricao() {
-        return this.descricao;
+        return descricao;
     }
 
     public void setDescricao(String descricao) {
@@ -61,19 +75,27 @@ public class Item {
     }
 
     public String getImagem() {
-        return this.imagem;
+        return imagem;
     }
 
-    public void setImagemId(String imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
-    
-    public Boolean getAtivo() {
-        return this.ativo;
+
+    public boolean isAtivo() {
+        return ativo;
     }
 
-    public void setAtivo(Boolean ativo) {
+    public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public List<Necessidade> getNecessidades() {
+        return necessidades;
+    }
+
+    public void setNecessidades(List<Necessidade> necessidades) {
+        this.necessidades = necessidades;
     }
 
     @Override

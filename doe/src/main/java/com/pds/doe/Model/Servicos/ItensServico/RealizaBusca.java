@@ -11,13 +11,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public class RealizaBusca {
 
 	private IRepositorioItem itensDoacao;
 	private IRepositorioNecessidade iRepositorioNecessidade;
 
-	@Autowired
+	
 	public RealizaBusca(IRepositorioItem itensDoacao, IRepositorioNecessidade iRepositorioNecessidade) {
 		this.itensDoacao = itensDoacao;
 		this.iRepositorioNecessidade = iRepositorioNecessidade;

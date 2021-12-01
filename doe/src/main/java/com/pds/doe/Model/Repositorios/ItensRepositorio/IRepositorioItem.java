@@ -4,9 +4,11 @@ import java.util.List;
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import com.pds.doe.Model.Repositorios.IRepositorio;
 
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+import org.springframework.data.domain.Page;
+
 public interface IRepositorioItem {
 
-	//List<Item> findByChave(String chave);
-    //List<Item> findAll();
+    
 
 }

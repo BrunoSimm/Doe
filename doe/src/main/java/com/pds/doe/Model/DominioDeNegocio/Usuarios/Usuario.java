@@ -1,5 +1,6 @@
 package com.pds.doe.Model.DominioDeNegocio.Usuarios;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,7 @@ public abstract class Usuario {
 	@Email
 	private String email;
 
-	@NotBlank
+	@Column(nullable = false, length = 64)
 	private String senha;
 
 	@NotBlank
@@ -38,6 +39,11 @@ public abstract class Usuario {
 		this.senha = senha;
 		this.nome = nome;
 		this.telefone = telefone;
+	}
+
+	public Usuario()
+	{
+
 	}
 
 	public Long getUser_id() {

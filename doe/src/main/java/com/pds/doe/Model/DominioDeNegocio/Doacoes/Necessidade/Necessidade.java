@@ -38,6 +38,10 @@ public class Necessidade {
 		this.status = status;
 	}
 
+	public Necessidade(){
+		
+	}
+
 	public Long getId() {
 		return id;
 	}

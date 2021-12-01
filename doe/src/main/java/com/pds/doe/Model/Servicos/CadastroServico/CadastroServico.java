@@ -32,6 +32,7 @@ public class CadastroServico {
 
 	public ONG cadastrarONG(CadastroONGDTO ongDTO) {
 		// TODO: validar dados do DTO
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
 		ONG ong = new ONG(
 			null,
