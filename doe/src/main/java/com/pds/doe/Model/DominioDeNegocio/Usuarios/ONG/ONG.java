@@ -28,7 +28,7 @@ public class ONG extends Usuario {
 	
 	@Enumerated(EnumType.STRING)
 	@Column
-	private EstadoDaConta estadoDaConta;
+	private EstadoDaConta estadoDaConta = EstadoDaConta.Inativa;
 
 	public ONG(Long user_id, @Email String email, @NotBlank String senha, @NotBlank String nome,
 			@NotBlank String telefone, String finalidade, String representante, String registro,
@@ -83,6 +83,18 @@ public class ONG extends Usuario {
 
 	public void setEstadoDaConta(EstadoDaConta estadoDaConta) {
 		this.estadoDaConta = estadoDaConta;
+	}
+
+	public void bloquearConta() {
+		this.estadoDaConta = EstadoDaConta.Bloqueada;
+	}
+
+	public void desbloquearConta() {
+		this.estadoDaConta = EstadoDaConta.Ativa;
+	}
+
+	public void ativarConta() {
+		this.estadoDaConta = EstadoDaConta.Ativa;
 	}
 
 	@Override
