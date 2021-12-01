@@ -21,6 +21,7 @@ public class Usuario {
 	private Long user_id;
 
 	@Email
+	@Column(unique = true)
 	private String email;
 
 	@Column(nullable = false, length = 64)
