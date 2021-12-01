@@ -1,4 +1,4 @@
-package com.pds.doe.View.CadastrarItem;
+package com.pds.doe.Model.Servicos.DTOs;
 
 public class ItemDTO {
 

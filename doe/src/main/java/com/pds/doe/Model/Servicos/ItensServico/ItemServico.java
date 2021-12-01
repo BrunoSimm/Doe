@@ -1,7 +1,5 @@
 package com.pds.doe.Model.Servicos.ItensServico;
 
-import com.pds.doe.View.CadastrarItem.ItemDTO;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +10,7 @@ import com.pds.doe.Controller.Adaptadores.Doacoes.Item.RepositorioItens;
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import com.pds.doe.Model.Servicos.DTOs.EntityExistDTO;
 import com.pds.doe.Model.Servicos.DTOs.ItemCadastroDTO;
+import com.pds.doe.Model.Servicos.DTOs.ItemDTO;
 
 @Service
 public class ItemServico {
