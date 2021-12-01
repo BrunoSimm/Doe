@@ -2,32 +2,39 @@ package com.pds.doe.Model.Servicos.DTOs;
 
 public class ItemCadastroDTO {
 
-    String name;
-    String description;
-    String image;
+    String nome;
+    String descricao;
+    String imagem;
     
-    public ItemCadastroDTO(String name, String description, String image) {
-        this.name = name;
-        this.description = description;
-        this.image = image;
+    public ItemCadastroDTO(String nome, String descricao, String imagem) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.imagem = imagem;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    public String getDescription() {
-        return description;
+
+    public String getDescricao() {
+        return descricao;
     }
-    public void setDescription(String description) {
-        this.description = description;
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
-    public String getImage() {
-        return image;
+
+    public String getImagem() {
+        return imagem;
     }
-    public void setImage(String image) {
-        this.image = image;
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
+
+    
 }

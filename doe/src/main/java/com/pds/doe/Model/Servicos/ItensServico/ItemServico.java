@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 
 import com.pds.doe.Controller.Adaptadores.Doacoes.Item.RepositorioItens;
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
@@ -30,8 +32,13 @@ public class ItemServico {
 
 	}
 
-    public Page<Item> getItensPaginated(Pageable pageable) {
-        return this.repositorioItens.findAll(pageable);
+    public List<Item> getItensPaginated(Pageable pageable) {
+
+		
+		List<Item> itens = this.repositorioItens.findAll(pageable).toList();
+
+		
+        return itens;
     }
 
     public EntityExistDTO checkItemExistsByName(String itemName) {
@@ -46,8 +53,8 @@ public class ItemServico {
     }
 
 	public Item createItem(ItemCadastroDTO itemDTO) {
-		if(this.repositorioItens.findItemByNome(itemDTO.getName()) == null){
-			return this.repositorioItens.save(new Item(itemDTO.getName(), itemDTO.getDescription(), itemDTO.getImage(), false));
+		if(this.repositorioItens.findItemByNome(itemDTO.getNome()) == null){
+			return this.repositorioItens.save(new Item(itemDTO.getNome(), itemDTO.getDescricao(), itemDTO.getImagem(), false));
 		}
 		return null;
 	}
