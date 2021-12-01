@@ -15,27 +15,29 @@ public class ItemDTO {
 	}
 
 	public String getNome() {
-		return null;
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getDescricao() {
-		return null;
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public String getImagem() {
-		return null;
+		return imagem;
 	}
 
-	public void setNome(String novoNome) {
-
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
-	public void setDescricao(String novaDescricao) {
-
-	}
-
-	public void setImagem(String novaImagem) {
-
-	}
+	
 
 }

@@ -2,13 +2,8 @@ package com.pds.doe.Model.Servicos.ItensServico;
 
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.Usuario;
-import com.pds.doe.Model.Repositorios.DoacoesRepositorio.ItensNecessidade;
 import com.pds.doe.Model.Repositorios.ItensRepositorio.IRepositorioItem;
 import com.pds.doe.Model.Repositorios.NecessidadeRepositorio.IRepositorioNecessidade;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 public class RealizaBusca {

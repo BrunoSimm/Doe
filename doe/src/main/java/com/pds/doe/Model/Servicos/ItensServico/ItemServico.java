@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import com.pds.doe.Controller.Adaptadores.Doacoes.Item.RepositorioItens;
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
+import com.pds.doe.Model.Servicos.DTOs.EntityExistDTO;
 import com.pds.doe.Model.Servicos.DTOs.ItemCadastroDTO;
-import com.pds.doe.Model.Servicos.DTOs.ItemExistDTO;
 
 @Service
 public class ItemServico {
@@ -35,9 +35,9 @@ public class ItemServico {
         return this.repositorioItens.findAll(pageable);
     }
 
-    public ItemExistDTO checkItemExistsByName(String itemName) {
+    public EntityExistDTO checkItemExistsByName(String itemName) {
 		Item item = this.repositorioItens.findItemByNome(itemName);
-		ItemExistDTO itemExistDTO = new ItemExistDTO(false);
+		EntityExistDTO itemExistDTO = new EntityExistDTO();
 
 		if(item == null){
 			itemExistDTO.setExists(false); // Item não existe.
@@ -47,6 +47,9 @@ public class ItemServico {
     }
 
 	public Item createItem(ItemCadastroDTO itemDTO) {
-		return this.repositorioItens.save(new Item(itemDTO.getName(), itemDTO.getDescription(), itemDTO.getImage(), false));
+		if(this.repositorioItens.findItemByNome(itemDTO.getName()) == null){
+			return this.repositorioItens.save(new Item(itemDTO.getName(), itemDTO.getDescription(), itemDTO.getImage(), false));
+		}
+		return null;
 	}
 }

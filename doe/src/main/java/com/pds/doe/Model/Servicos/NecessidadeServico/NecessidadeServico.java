@@ -1,35 +1,48 @@
 package com.pds.doe.Model.Servicos.NecessidadeServico;
 
-import com.pds.doe.Model.Repositorios.NecessidadeRepositorio.IRepositorioNecessidade;
+import com.pds.doe.Model.Servicos.DTOs.EntityExistDTO;
+import com.pds.doe.Model.Servicos.DTOs.NecessidadeCadastroDTO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.pds.doe.Model.Repositorios.ItensRepositorio.IRepositorioItem;
-import com.pds.doe.Controller.Adaptadores.Doacoes.Item.RepositorioItens;
 import com.pds.doe.Controller.Adaptadores.Doacoes.Necessidade.RepositorioNecessidades;
-import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
-import java.util.Date;
-import java.util.List;
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Necessidade.Necessidade;
 
 @Service
 public class NecessidadeServico {
 
 	private RepositorioNecessidades repositorioNecessidades;
-	private RepositorioItens repositorioItens;
 
 	@Autowired
-	public NecessidadeServico(RepositorioNecessidades repositorioNecessidades, RepositorioItens repositorioItens) {
+	public NecessidadeServico(RepositorioNecessidades repositorioNecessidades) {
 		this.repositorioNecessidades = repositorioNecessidades;
-		this.repositorioItens = repositorioItens;
 	}
 
-	public boolean validaDadosNecessidade(Item item, int quantidade, int quantidade_atual, Date prazoLimite, String status) {
-		return false;
+    public Page<Necessidade> getNecessidadePaginated(Pageable paging) {
+        return this.repositorioNecessidades.findAll(paging);
+    }
+
+	public EntityExistDTO checkNecessidadeExistsByItemId(Long itemId) {
+		Necessidade necessidade = this.repositorioNecessidades.findNecessidadeExistsByItemId(itemId);
+		EntityExistDTO necessidadeExistDTO = new EntityExistDTO();
+
+		if(necessidade == null){
+			necessidadeExistDTO.setExists(false); // necessidade não existe.
+		} else necessidadeExistDTO.setExists(true);
+
+        return necessidadeExistDTO;
 	}
 
-	public List<Item> listarItens() {
-		return null;
-	}
+    public Necessidade createNecessidade(NecessidadeCadastroDTO necessidadeDTO) {
+        if(this.checkNecessidadeExistsByItemId(necessidadeDTO.getIdItem()).getExists() == true){
+			return null;
+		}
+		return this.repositorioNecessidades.save(
+			new Necessidade(null, necessidadeDTO.getExpectedQuantity(), necessidadeDTO.getCurrentQuantity(), necessidadeDTO.getlimitDate(), necessidadeDTO.getStatus(), necessidadeDTO.getIdItem())
+		);
+    }
 
 }

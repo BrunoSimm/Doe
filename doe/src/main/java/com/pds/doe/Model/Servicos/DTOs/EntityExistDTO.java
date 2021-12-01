@@ -1,18 +1,18 @@
 package com.pds.doe.Model.Servicos.DTOs;
 
-public class ItemExistDTO {
+public class EntityExistDTO {
 
     boolean exists;
 
-    public ItemExistDTO(boolean exists) {
+    public EntityExistDTO(boolean exists) {
         this.exists = exists;
     }
 
-    public ItemExistDTO(){
+    public EntityExistDTO(){
         
     }
 
-    public boolean isExists() {
+    public boolean getExists() {
         return exists;
     }
 

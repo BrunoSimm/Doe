@@ -1,9 +1,6 @@
 package com.pds.doe.Controller.Adaptadores.Doacoes.Item;
 
-import java.util.List;
-
 import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
-import com.pds.doe.Model.Repositorios.ItensRepositorio.IRepositorioItem;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

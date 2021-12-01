@@ -7,7 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.pds.doe.Model.DominioDeNegocio.Doacoes.Item.Item;
 
 
 @Entity
@@ -29,14 +32,29 @@ public class Necessidade {
 	
 	@Column
 	private String status = "inativo";
+
+	@Column
+	private Long item_id;
 	
-	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status) {
+	public Necessidade(Long id, int quantidade_esperada, int quantidade_atual, Date prazoLimite, String status,
+			Long item_id) {
 		this.id = id;
 		this.quantidade_esperada = quantidade_esperada;
 		this.quantidade_atual = quantidade_atual;
 		this.prazoLimite = prazoLimite;
 		this.status = status;
+		this.item_id = item_id;
 	}
+
+	public Long getItem_id() {
+		return item_id;
+	}
+
+
+	public void setItem_id(Long item_id) {
+		this.item_id = item_id;
+	}
+
 
 	public Necessidade(){
 		
