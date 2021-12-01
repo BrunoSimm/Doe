@@ -37,9 +37,9 @@ public class CadastroServico {
 		ONG ong = new ONG(
 			null,
 			ongDTO.getEmail(), 
-			ongDTO.getSenha(), 
-			ongDTO.getNome(), 
-			ongDTO.getTelefone(), 
+			ongDTO.getPassword(), 
+			ongDTO.getFullName(), 
+			ongDTO.getPhone(), 
 			ongDTO.getFinalidade(), 
 			ongDTO.getRepresentante(), 
 			ongDTO.getRegistro(), 
@@ -54,9 +54,9 @@ public class CadastroServico {
 		Doador doador = new Doador(
 			null,
 			doadorDTO.getEmail(), 
-			doadorDTO.getSenha(), 
-			doadorDTO.getNome(), 
-			doadorDTO.getTelefone(), 
+			doadorDTO.getPassword(), 
+			doadorDTO.getFullName(), 
+			doadorDTO.getPhone(), 
 			doadorDTO.getSobrenome(), 
 			doadorDTO.getCpf(), 
 			true

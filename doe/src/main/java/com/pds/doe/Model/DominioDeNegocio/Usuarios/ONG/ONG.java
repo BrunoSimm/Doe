@@ -41,6 +41,10 @@ public class ONG extends Usuario {
 		this.estadoDaConta = estadoDaConta;
 	}
 
+	public ONG(){
+		
+	}
+
 	public String getFinalidade() {
 		return finalidade;
 	}
