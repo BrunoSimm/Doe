@@ -98,6 +98,14 @@ public class Item {
         this.necessidades = necessidades;
     }
 
+    public void makeActive() {
+        this.ativo = true;
+    }
+
+    public void makeNotActive() {
+        this.ativo = false;
+    }
+
     @Override
     public String toString() {
         return "Item [ativo=" + ativo + ", descricao=" + descricao + ", id=" + id + ", imagem=" + imagem + ", nome="

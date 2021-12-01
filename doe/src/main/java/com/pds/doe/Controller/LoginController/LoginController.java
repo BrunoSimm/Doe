@@ -1,12 +1,7 @@
 package com.pds.doe.Controller.LoginController;
 
-import com.pds.doe.Model.DominioDeNegocio.Usuarios.ONG.ONG;
 import com.pds.doe.Model.DominioDeNegocio.Usuarios.Usuario;
-import com.pds.doe.Model.DominioDeNegocio.Usuarios.Doador.Doador;
-import com.pds.doe.Model.Servicos.CadastroServico.CadastroServico;
 import com.pds.doe.Model.Servicos.CadastroServico.LoginService;
-import com.pds.doe.Model.Servicos.DTOs.CadastroDoadorDTO;
-import com.pds.doe.Model.Servicos.DTOs.CadastroONGDTO;
 import com.pds.doe.Model.Servicos.DTOs.LoginDTO;
 import com.pds.doe.Model.Servicos.DTOs.LoginReturnDTO;
 

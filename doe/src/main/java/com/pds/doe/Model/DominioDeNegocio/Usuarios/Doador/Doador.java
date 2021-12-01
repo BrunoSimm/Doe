@@ -22,7 +22,7 @@ public class Doador extends Usuario {
 	private String cpf;
 	
 	@Column
-	private boolean contaAtiva;
+	private boolean contaAtiva = true;
 
 	public Doador(Long user_id, @Email String email, @NotBlank String senha, @NotBlank String nome,
 			@NotBlank String telefone, String sobrenome, @CPF String cpf, boolean contaAtiva) {

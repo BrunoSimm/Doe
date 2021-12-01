@@ -43,18 +43,16 @@ public class Necessidade {
 		this.item_id = item_id;
 	}
 
+	public Necessidade(){
+
+	}
+
 	public Long getItem_id() {
 		return item_id;
 	}
 
-
 	public void setItem_id(Long item_id) {
 		this.item_id = item_id;
-	}
-
-
-	public Necessidade(){
-		
 	}
 
 	public Long getId() {
@@ -96,8 +94,6 @@ public class Necessidade {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
-	
 
 	@Override
 	public String toString() {
