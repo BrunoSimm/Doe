@@ -32,6 +32,10 @@ public class Doador extends Usuario {
 		this.contaAtiva = contaAtiva;
 	}
 
+	public Doador(){
+
+	}
+
 	public String getSobrenome() {
 		return sobrenome;
 	}

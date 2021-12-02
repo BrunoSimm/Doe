@@ -32,10 +32,7 @@ public class ItemServico {
 
     public List<Item> getItensPaginated(Pageable pageable) {
 
-		
 		List<Item> itens = this.repositorioItens.findAll(pageable).toList();
-
-		
         return itens;
     }
 

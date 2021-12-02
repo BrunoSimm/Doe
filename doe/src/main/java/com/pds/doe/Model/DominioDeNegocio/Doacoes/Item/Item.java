@@ -29,14 +29,14 @@ public class Item {
     @Column
     private String descricao;
 	
-    @Column(length = 7000)
+    @Column(length = 10000)
     private String imagem;
 	
     @Column
     private boolean ativo = false;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "item_id") // TODO: Lazy Load
+    @JoinColumn(name = "item_id")
     private List<Necessidade> necessidades;
 
 	public Item(String nome, String descricao, String imagem, boolean ativo) {

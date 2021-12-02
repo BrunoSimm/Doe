@@ -32,7 +32,7 @@ public class LoginController {
 		Usuario usuario = this.loginService.validateLogin(loginDTO);
 
 		if(usuario == null){
-			return ResponseEntity.status(403).build(); //TODO: VALIDAR NO FRONT
+			return ResponseEntity.status(403).build();
 		}
 
 		HttpHeaders responseHeaders = new HttpHeaders();

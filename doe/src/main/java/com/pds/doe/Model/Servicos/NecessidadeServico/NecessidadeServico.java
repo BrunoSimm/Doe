@@ -30,7 +30,6 @@ public class NecessidadeServico {
 
     public List<NecessidadeDTO> getNecessidadePaginated(Pageable paging) {
 		List<NecessidadeDTO> necessidadesDTO = new ArrayList<NecessidadeDTO>();
-		
 		List<Necessidade> necessidades = this.repositorioNecessidades.findAll(paging).toList();
 
 		for (Necessidade necessidade : necessidades) {
@@ -52,8 +51,6 @@ public class NecessidadeServico {
 		}
         return necessidadesDTO;
     }
-
-	
 
 	public EntityExistDTO checkNecessidadeExistsByItemId(Long itemId) {
 		Necessidade necessidade = this.repositorioNecessidades.findNecessidadeExistsByItemId(itemId);
