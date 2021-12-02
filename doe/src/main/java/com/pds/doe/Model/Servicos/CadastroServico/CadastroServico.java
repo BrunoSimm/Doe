@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CadastroServico {
-	private RepositorioONG iRepositorioONG;
-	private RepositorioDoador iRepositorioDoador;
+	private RepositorioONG repositorioONG;
+	private RepositorioDoador repositorioDoador;
 
 	@Autowired
-	public CadastroServico(RepositorioONG iRepositorioONG, RepositorioDoador iRepositorioDoador) {
-		this.iRepositorioONG = iRepositorioONG;
-		this.iRepositorioDoador = iRepositorioDoador;
+	public CadastroServico(RepositorioONG repositorioONG, RepositorioDoador repositorioDoador) {
+		this.repositorioONG = repositorioONG;
+		this.repositorioDoador = repositorioDoador;
 	}
 
 	public boolean consultaDoador(String email, String cpf) {
@@ -46,7 +46,7 @@ public class CadastroServico {
 			ongDTO.getDominio(), 
 			EstadoDaConta.Inativa
 		);
-		return this.iRepositorioONG.save(ong);
+		return this.repositorioONG.save(ong);
 	}
 
 	public Doador cadastrarDoador(CadastroDoadorDTO doadorDTO) {
@@ -61,7 +61,7 @@ public class CadastroServico {
 			doadorDTO.getCpf(), 
 			true
 		);
-		return this.iRepositorioDoador.save(doador);
+		return this.repositorioDoador.save(doador);
 	}
 
 	public boolean validaDadosCadastrados(ONG ong) {

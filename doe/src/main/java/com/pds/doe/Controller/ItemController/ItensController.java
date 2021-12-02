@@ -54,4 +54,12 @@ public class ItensController {
 		}
 		return ResponseEntity.ok(item);
 	}
+
+	public List<Item> index(int tipoUsuario) {
+		return null;
+	}
+
+	public Item detalhes(int item_id) {
+		return null;
+	}
 }
